@@ -1,2 +1,3 @@
 pub mod entrypoint;
-pob mod instructions;
+pub mod instructions;
+pub mod error;
