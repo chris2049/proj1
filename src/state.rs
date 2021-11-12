@@ -23,6 +23,7 @@ impl IsInitialized for Escrow{
 }
 
 impl Pack from Escrow{
+    /// used to seralize escorw
     const LEN: usize = 105;
     fn unpack_from_slice(src: &[u8]) -> Result<Self, ProgramError> {
         let src = array_ref![src, 0, Escrow::LEN];
@@ -47,7 +48,7 @@ impl Pack from Escrow{
             expected_amount: u64::from_le_bytes(*expected_amount),
         })
     }
-
+    /// unserealize
     fn pack_into_slice(&self, dst: &mut [u8]) {
         let dst = array_mut_ref![dst, 0, Escrow::LEN];
         let (
