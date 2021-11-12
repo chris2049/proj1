@@ -4,7 +4,7 @@ use solana_program::{
     pubkey::Pubkey,
 };
 
-use arrayef::{array_mut_ref, array_ref, array_refs, mut_array_refs}
+use arrayef::{array_mut_ref, array_ref, array_refs, mut_array_refs};
 
 pub struct Escrow {
     pub is_initialized: bool,
